@@ -25,7 +25,6 @@ export const useProducts = (limit = 12, skip = 0, category = null) => {
           cacheKey = `products-all-${skip}-${limit}`;
         }
 
-        // Check cache first
         const cachedData = getCachedData(cacheKey);
         if (cachedData) {
           setProducts(cachedData.products);
@@ -36,7 +35,6 @@ export const useProducts = (limit = 12, skip = 0, category = null) => {
 
         const response = await axios.get(url);
         
-        // If category is selected, handle pagination manually
         let productsData, totalCount;
         if (category && category !== 'all') {
           const allProducts = response.data.products;
@@ -47,7 +45,6 @@ export const useProducts = (limit = 12, skip = 0, category = null) => {
           totalCount = response.data.total;
         }
         
-        // Cache the results
         setCachedData(cacheKey, { products: productsData, total: totalCount });
         
         setProducts(productsData);

@@ -20,7 +20,6 @@ export const useProductDetail = (id) => {
       try {
         const cacheKey = `product-${id}`;
         
-        // Check cache first
         const cachedProduct = getCachedData(cacheKey);
         if (cachedProduct) {
           setProduct(cachedProduct);
@@ -29,8 +28,6 @@ export const useProductDetail = (id) => {
         }
         
         const response = await axios.get(`https://dummyjson.com/products/${id}`);
-        
-        // Cache the product
         setCachedData(cacheKey, response.data);
         setProduct(response.data);
       } catch (err) {

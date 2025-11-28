@@ -12,7 +12,6 @@ import CategoryFilter from '../components/CategoryFilter';
 import SortDropdown from '../components/SortDropdown';
 import ErrorMessage from '../components/ErrorMessage';
 
-// Dynamically import ProductDetailModal (loaded only when needed)
 const ProductDetailModal = dynamic(
   () => import('../components/ProductDetailModal'),
   { ssr: false }
@@ -34,12 +33,10 @@ export default function Home() {
   );
   const { categories, loading: categoriesLoading } = useCategories();
 
-  // Reset to page 1 when category changes
   useEffect(() => {
     setCurrentPage(1);
   }, [selectedCategory]);
 
-  // Sort products client-side
   const sortedProducts = useMemo(() => {
     if (!products || products.length === 0) return [];
     

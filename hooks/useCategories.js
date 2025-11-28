@@ -15,7 +15,6 @@ export const useCategories = () => {
       try {
         const cacheKey = 'categories';
         
-        // Check cache first
         const cachedCategories = getCachedData(cacheKey);
         if (cachedCategories) {
           setCategories(cachedCategories);
@@ -25,7 +24,6 @@ export const useCategories = () => {
         
         const response = await axios.get('https://dummyjson.com/products/categories');
         
-        // Cache the categories
         setCachedData(cacheKey, response.data);
         setCategories(response.data);
       } catch (err) {

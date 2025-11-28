@@ -1,5 +1,3 @@
-'use client';
-
 export default function ProductSkeleton({ count = 12 }) {
   return (
     <>

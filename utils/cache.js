@@ -1,6 +1,5 @@
-// Simple in-memory cache for API requests
 const cache = new Map();
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+const CACHE_DURATION = 5 * 60 * 1000;
 
 export const getCachedData = (key) => {
   const cached = cache.get(key);
