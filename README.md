@@ -2,10 +2,19 @@
 
 A modern, production-ready e-commerce product showcase application built with Next.js, featuring smooth animations, advanced filtering, and a beautiful user interface.
 
+## 🌐 Live Demo
+
+**🚀 [View Live Website](https://product-show-case-five.vercel.app/)**
+
+Experience the application in action! The live demo is deployed on Vercel with full functionality.
+
+---
+
 ![Showcase Explorer](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
 ![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8?style=for-the-badge&logo=tailwind-css)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-ff0055?style=for-the-badge&logo=framer)
+![Live](https://img.shields.io/badge/Live-Vercel-00C7B7?style=for-the-badge&logo=vercel)
 
 ## ✨ Features
 
